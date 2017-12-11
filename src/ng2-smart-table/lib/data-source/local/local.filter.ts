@@ -1,6 +1,6 @@
 export class LocalFilter {
 
-  protected static FILTER = (value: string, search: string) => {
+  protected static FILTER = (value: string, search: string, data: any) => {
     return value.toString().toLowerCase().includes(search.toString().toLowerCase());
   }
 
@@ -9,7 +9,7 @@ export class LocalFilter {
 
     return data.filter((el) => {
       const value = typeof el[field] === 'undefined' || el[field] === null ? '' : el[field];
-      return filter.call(null, value, search);
+      return filter.call(null, value, search, el);
     });
   }
 }

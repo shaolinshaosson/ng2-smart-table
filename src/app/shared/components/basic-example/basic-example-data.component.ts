@@ -12,6 +12,15 @@ export class BasicExampleDataComponent {
     columns: {
       id: {
         title: 'ID',
+          class: 'test',
+          dataClass: 'examleclass',
+          filterFunction(cell?: any, search?: string, data?: any): boolean {
+              //console.error(cell, search, data);
+              const fieldsSplit = ['id', 'name', 'username'];
+              return fieldsSplit.some((field) => {
+                  return data[field].toString().toLowerCase().indexOf(search) !== -1;
+              });
+          }
       },
       name: {
         title: 'Full Name',

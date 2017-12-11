@@ -5,6 +5,7 @@ export class Column {
   title: string = '';
   type: string = '';
   class: string = '';
+  dataClass: string = '';
   width: string = '';
   isSortable: boolean = false;
   isEditable: boolean = true;
@@ -55,6 +56,10 @@ export class Column {
   protected process() {
     this.title = this.settings['title'];
     this.class = this.settings['class'];
+
+    /** P46 */
+    this.dataClass = this.settings['dataClass'];
+
     this.width = this.settings['width'];
     this.type = this.prepareType();
     this.editor = this.settings['editor'];
