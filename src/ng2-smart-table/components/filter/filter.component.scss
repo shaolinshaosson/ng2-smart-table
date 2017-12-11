@@ -17,6 +17,17 @@
       a {
         font-weight: normal;
       }
+      input-filter {
+        position: relative;
+        display: block;
+      }
+      .table-clear-input {
+        position: absolute;
+        padding: 4px 5px;
+        right:1px;
+        top:0;
+        cursor: pointer;
+      }
     }
   }
 }

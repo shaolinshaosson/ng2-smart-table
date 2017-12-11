@@ -8,6 +8,7 @@ import { CheckboxFilterComponent } from './filter-types/checkbox-filter.componen
 import { CompleterFilterComponent } from './filter-types/completer-filter.component';
 import { InputFilterComponent } from './filter-types/input-filter.component';
 import { SelectFilterComponent } from './filter-types/select-filter.component';
+import { ClearInputDirective } from "../../lib/clear-input.directive";
 
 const FILTER_COMPONENTS = [
   FilterComponent,
@@ -15,6 +16,7 @@ const FILTER_COMPONENTS = [
   CompleterFilterComponent,
   InputFilterComponent,
   SelectFilterComponent,
+  ClearInputDirective
 ];
 
 @NgModule({
