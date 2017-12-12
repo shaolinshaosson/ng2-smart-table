@@ -19,7 +19,7 @@
     <ng2-st-tbody-create-cancel [grid]="grid" [row]="row" [editConfirm]="editConfirm"></ng2-st-tbody-create-cancel>
   </td>
   <!-- P46 -->
-  <td *ngFor="let cell of row.cells" [class]="cell.getColumn().dataClass">
+  <td *ngFor="let cell of row.cells" [class]="cell.getColumn().dataClass+' '+cell.getId()">
     <ng2-smart-table-cell [cell]="cell"
                           [grid]="grid"
                           [row]="row"
